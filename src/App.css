@@ -11,3 +11,9 @@
       grid-gap: 10px;
 
 }
+
+.app-wrapper-content {
+  grid-area: content;
+  background: linear-gradient(to bottom, #ffffff, #7494a3bc);
+  
+}

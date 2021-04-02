@@ -1,6 +1,7 @@
 .nav {
+  height: 200px;
   grid-area: nav;
-  background-color: rgba(38, 37, 98, 0.137);
+  background: linear-gradient(to top, #fefcea, #8596a3);
 }
 
 div {
