@@ -1,7 +1,8 @@
 .nav {
+  border-radius: 10px;
   height: 200px;
   grid-area: nav;
-  background: linear-gradient(to top, #fefcea, #8596a3);
+  background: linear-gradient(to bottom, rgb(101, 111, 119), rgb(92, 133, 199));
 }
 
 div {
@@ -10,7 +11,20 @@ div {
 
 }
 
-.item {
-  color: white;
+.links {
+  color: rgb(66, 65, 65);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity .2s linear;
 
+}
+
+.links.active {
+  color: rgb(255, 255, 255);
+
+}
+
+.links:hover {
+  color: rgb(255, 255, 255);
+  opacity: 1;
 }

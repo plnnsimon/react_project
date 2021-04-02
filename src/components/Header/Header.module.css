@@ -1,7 +1,7 @@
 .header {
-  
+  border-radius: 10px;
     grid-area: header;
-    background: linear-gradient(to top, #fefcea, #8a97a1);
+    background: linear-gradient(to top, rgb(109, 109, 112), rgb(191, 202, 223));
   }
   
   .header img {
