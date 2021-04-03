@@ -2,6 +2,11 @@
 .dialogs {
   display: grid;
   grid-template-columns: 4fr 10fr;
+  
+}
+
+.dialogs_items {
+  color: white;
 }
 
 .dialogs_items .active {
@@ -13,10 +18,6 @@
 }
 
 
-.messages {
-  
-}
-
-.message {
-
+.messages .message {
+  color: white;
 }
