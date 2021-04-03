@@ -13,6 +13,7 @@
 }
 
 .app-wrapper-content {
+  
   grid-area: content;
   background: linear-gradient(to bottom, rgba(238, 245, 217, 0.774),rgb(55, 55, 61));
   border-radius: 10px;
