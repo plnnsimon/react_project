@@ -9,7 +9,7 @@ import Message from './Message/Message';
 
 const Dialogs = (props) => {   
 
-    let state = props.store.getState().dialogsPage;
+    let state = props.dialogsPage;
 
     let dialogsElements = state.dialogs.map ( dialog => <DialogItem name={dialog.name} id={dialog.id} /> ) ; 
        
@@ -17,12 +17,12 @@ const Dialogs = (props) => {
     let newMessageText = state.newMessageText;
 
     let addNewMessage = () => {
-        props.store.dispatch(sendMessageCreator());
+        props.sendMessage();
     }
 
     let onNewMessageChange = (e) => {
         let body = e.target.value;
-        props.store.dispatch(updateNewMessageTextCreator(body));
+        props.updateNewMessageText(body);
     }
 
     return (

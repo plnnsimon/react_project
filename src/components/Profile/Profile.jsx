@@ -1,7 +1,5 @@
 import React from 'react';
-import state, { addPost, updateNewPostText } from '../../redux/store';
-import MyPosts from './MyPosts/MyPosts';
-import classes from'./Profile.module.css';
+import MyPostsContainer from './MyPosts/MyPostsContainer';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 
@@ -10,9 +8,7 @@ const Profile = (props) => {
         <div>
             <ProfileInfo />
             
-            <MyPosts posts={props.profilePage.posts}
-                    newPostText={props.profilePage.newPostText}
-                    dispatch={props.dispatch}  />
+            <MyPostsContainer store={props.store}y />
          </div>
     )
 
