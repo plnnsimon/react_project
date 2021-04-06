@@ -2,7 +2,7 @@
   border-radius: 10px;
   height: 200px;
   grid-area: nav;
-  background: linear-gradient(to bottom, rgb(165, 168, 172), rgb(127, 137, 153));
+  background: linear-gradient(to bottom, rgba(132, 246, 237, 0.609),rgba(24, 86, 92, 0.801));
 }
 
 div {
