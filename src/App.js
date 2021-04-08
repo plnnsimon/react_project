@@ -10,7 +10,7 @@ import Nav from './components/Nav/Nav';
 import News from './components/News/News';
 import Profile from './components/Profile/Profile';
 import Settings from './components/Settings/Settings';
-import UsersContainer from './components/Users/Users Container';
+import UsersContainer from './components/Users/UsersContainer';
 
 const App = (props) => {
   return (
