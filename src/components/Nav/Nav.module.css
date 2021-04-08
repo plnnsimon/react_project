@@ -2,7 +2,7 @@
   border-radius: 10px;
   height: 200px;
   grid-area: nav;
-  background: linear-gradient(to bottom, rgba(132, 246, 237, 0.609),rgba(24, 86, 92, 0.801));
+  background: linear-gradient(to bottom, rgb(31, 30, 30),rgba(60, 61, 61, 0.671));
 }
 
 div {
@@ -12,7 +12,7 @@ div {
 }
 
 .links {
-  color: rgb(66, 65, 65);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   opacity: 0.8;
   transition: opacity .2s linear;
@@ -20,11 +20,13 @@ div {
 }
 
 .links.active {
-  color: rgb(255, 255, 255);
-
+  color: rgb(255, 230, 0);
+  font-size: 20px;
+  margin: 10px;
+  
 }
 
 .links:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(149, 149, 149);
   opacity: 1;
 }

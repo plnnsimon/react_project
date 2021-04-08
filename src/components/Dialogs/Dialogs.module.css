@@ -5,19 +5,19 @@
   
 }
 
-.dialogs_items {
-  color: white;
+.dialogs .dialogs_items {
+  color: rgb(255, 255, 255);
 }
 
 .dialogs_items .active {
-  color: gold;
+  color: rgb(255, 0, 0);
 }
 
 .dialog {
-
+  color: white;
 }
 
 
 .messages .message {
-  color: white;
+  color: rgb(255, 255, 255);
 }
