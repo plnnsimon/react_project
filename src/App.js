@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
+import LoginPage from './components/Login/Login';
 import Music from './components/Music/Music';
 import Nav from './components/Nav/Nav';
 import News from './components/News/News';
@@ -30,6 +31,9 @@ const App = (props) => {
 
           <Route path='/users' 
               render={ () => <UsersContainer /> } />
+
+          <Route path='/login' 
+              render={ () => <LoginPage /> } />
 
           <Route path='/news' render={ () => <News /> } />
           <Route path='/music' render={ () => <Music /> } />
