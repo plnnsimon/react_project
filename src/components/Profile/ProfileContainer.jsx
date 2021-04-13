@@ -1,43 +1,39 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import Profile from './Profile';
-import { getUserProfile } from '../../redux/profile-reducer';
-import { withRouter } from 'react-router';
-import { withAuthRedirect } from '../../hoc/withAuthRedirect';
+import Profile from "./Profile";
+import * as axios from "axios";
+import {connect} from "react-redux";
+import { getUserProfile} from "../../redux/profile-reducer";
+import {getStatus} from "../../redux/profile-reducer";
+import {updateStatus} from "../../redux/profile-reducer";
+import {Redirect, withRouter} from "react-router-dom";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import {compose} from "redux";
 
+class ProfileContainer extends React.Component {
 
-
-class ProfileContainer extends React.Component{
-
-    componentDidMount () {
+    componentDidMount() {
         let userId = this.props.match.params.userId;
         if (!userId) {
-            userId = 2;
+            userId = 16410;
         }
         this.props.getUserProfile(userId);
+        this.props.getStatus(userId);
     }
 
     render() {
-        
-
         return (
-            <Profile {...this.props} profile={this.props.profile} />
+            <Profile {...this.props} profile={this.props.profile} status={this.props.status} updateStatus={this.props.updateStatus}/>
         )
     }
-}   
-
-let AuthRedirectComponent = withAuthRedirect(ProfileContainer);
-
-let mapStateToPropsForRedirect = (state) => ({
-    isAuth: state.auth.isAuth
-});
-
-AuthRedirectComponent = connect(mapStateToPropsForRedirect) (AuthRedirectComponent);
+}
 
 let mapStateToProps = (state) => ({
-    profile: state.profilePage.profile
+    profile: state.profilePage.profile,
+    status: state.profilePage.status
 });
 
-let WithUrlDataContainerComponent = withRouter(AuthRedirectComponent);
+export default compose(
+    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus}),
+    withRouter
+)(ProfileContainer);
 
-export default connect (mapStateToProps, {getUserProfile}) (WithUrlDataContainerComponent);
