@@ -10,7 +10,28 @@
 }
 
 .formSummaryError {
+    background-color: rgba(226, 143, 143, 0.787);
     border: red 1px solid;
+    border-radius: 5px;
     padding: 5px;
     color: red;
+    width: 150px;
+}
+
+div input {
+    padding: 5px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+button {
+    cursor: pointer;
+    border-radius: 5px;
+    border-width: 0;
+    height: 20px;
+}
+button:hover {
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
 }

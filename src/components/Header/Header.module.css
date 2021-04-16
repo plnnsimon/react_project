@@ -11,20 +11,42 @@
   }
   .loginBlock {
     float: right;
-    
-    
+        
   }
+  
   .loginBlock a {
-    
+    /* border: solid 1px; */
+    border-radius: 5px;
+    border-width: 0;
+    background:rgb(19, 131, 47);
+   
     text-decoration: none;
     color: white;
     opacity: .9;
     transition: opacity .2s linear;
-    
+    padding: 5px;
+    margin: 0 auto;
   }
 
 
   .loginBlock a:hover {
-    color: gold;
+    background:rgb(208, 210, 216);
+    color: rgb(0, 0, 0);
     opacity: 1;
   } 
+
+  .logout {
+    border-radius: 5px;
+    border-width: 0;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .logout:hover {
+    color: white;
+    background:rgba(111, 122, 122, 0.671)
+  }
+    
+    

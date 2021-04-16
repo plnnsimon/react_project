@@ -7,18 +7,21 @@ import {login} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
 import style from "./../common/FormsControls/FormsControls.module.css"
 
+
 const LoginForm = (props) => {
     return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
+        <form onSubmit={props.handleSubmit} >
+            <div >
                 <Field placeholder={"Email"} name={"email"}
                        validate={[required]}
-                       component={Input}/>
+                       component={Input}
+                       />
             </div>
-            <div>
+            <div >
                 <Field placeholder={"Password"} name={"password"} type={"password"}
                        validate={[required]}
-                       component={Input}/>
+                       component={Input}
+                       />
             </div>
             <div>
                 <Field component={Input} name={"rememberMe"} type={"checkbox"}/> remember me
