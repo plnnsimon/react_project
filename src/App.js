@@ -1,4 +1,4 @@
-import { connect } from 'formik';
+import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 
@@ -18,8 +18,10 @@ import { initializeApp } from './redux/app-reducer.js';
 debugger;
 class App extends Component {
   componentDidMount() {
-    this.props.getAuthUserData();
-  }
+    this.props.initializeApp();
+}
+
+
   render () {
     if (!this.props.initialized) {
       return <Preloader />
