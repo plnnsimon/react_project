@@ -15,7 +15,6 @@ import ProfileContainer from './components/Profile/ProfileContainer';
 import Settings from './components/Settings/Settings';
 import UsersContainer from './components/Users/UsersContainer';
 import { initializeApp } from './redux/app-reducer.js';
-debugger;
 class App extends Component {
   componentDidMount() {
     this.props.initializeApp();
