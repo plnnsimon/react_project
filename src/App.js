@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
-
 import { compose } from 'redux';
 import './App.css';
 import Preloader from './components/common/Preloader/Preloader';
