@@ -3,3 +3,18 @@
     font-size: 20px;
     color:gold;
 }
+.pageNumber.selectedPage {
+    font-weight: bold;
+    border-color: black;
+}
+.pageNumber {
+    margin: 1px;
+    padding: 2px;
+    border: 1.5px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pageNumber:hover {
+    background-color: rgb(104, 104, 104);
+}
