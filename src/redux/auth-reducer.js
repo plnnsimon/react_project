@@ -43,13 +43,13 @@ export const getAuthUserData = () => async (dispatch) => {
         }
 }
 
-export const login = (email, password, rememberMe) => async (dispatch) => {
+export const login = (email, password, rememberMe, captcha) => async (dispatch) => {
 
-    let response = await authAPI.login(email, password, rememberMe);
+    let response = await authAPI.login(email, password, rememberMe, captcha);
         if (response.data.resultCode === 0) {
             dispatch(getAuthUserData())
         } else {
-            if (response.ata.resultCode ===10) {
+            if (response.data.resultCode === 10) {
                 dispatch(getCaptchaUrl())
             }
             let message = response.data.messages.length > 0 ? response.data.messages[0] : "Some error";

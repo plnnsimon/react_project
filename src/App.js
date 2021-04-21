@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import React, { Component, Suspense } from 'react';
-import { BrowserRouter, Route, withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter, Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import './App.css';
 import Preloader from './components/common/Preloader/Preloader';
@@ -14,7 +14,7 @@ import UsersContainer from './components/Users/UsersContainer';
 import { initializeApp } from './redux/app-reducer.js';
 import store from './redux/redux-store';
 import { Provider } from 'react-redux';
-import { withSuspence, withSuspense } from './hoc/withSuspense';
+import { withSuspense } from './hoc/withSuspense';
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 
@@ -37,7 +37,10 @@ class App extends Component {
             <Nav />
             
             <div className='app-wrapper-content'>
-                      
+            <Switch>    
+              <Route exact path='/' 
+                    render={ () => <Redirect exact from='/' to='/profile' /> } />
+     
               <Route path='/dialogs' 
                   render={ withSuspense (DialogsContainer)} />
 
@@ -53,7 +56,8 @@ class App extends Component {
               <Route path='/news' render={ () => <News /> } />
               <Route path='/music' render={ () => <Music /> } />
               <Route path='/settings' render={ () => <Settings /> } />
-              
+              <Route path='*' render={ () => <div>404 NOT FOUND</div> } />
+              </Switch>   
             </div>
             
           </div>

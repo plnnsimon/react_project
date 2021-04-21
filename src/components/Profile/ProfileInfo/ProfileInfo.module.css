@@ -26,7 +26,7 @@ div .avatarDownload {
 
 .status {
   text-decoration: underline;
-
+  width: 400px;
 }
 .status b {
   color: black;
